@@ -1,1 +1,79 @@
 \ProvidesPackage{nottingham-mm}
+
+% Required Packages
+% Layout
+\RequirePackage[letterpaper, margin={1.25in,0.9in}]{geometry}
+\RequirePackage{setspace}
+% Title Page
+\RequirePackage{graphicx}
+\RequirePackage{array}
+\RequirePackage{multirow}
+% Content Tables
+\RequirePackage[table]{xcolor}
+
+% Indentation
+\setlength{\parindent}{0pt}
+
+% Title Page
+\newcommand{\academicyear}[1]{\renewcommand{\academicyear}{#1}}
+\newcommand{\supervisor}[1]{\renewcommand{\supervisor}{#1}}
+\newcommand{\length}[1]{\renewcommand{\length}{#1}}
+
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+        \let\newpage\relax
+        \newcommand{\textmargin}[0]{1.15ex}
+        \begin{center}
+            \includegraphics[width=0.4\linewidth,page=1]{images/nottingham-logo.pdf}
+    
+            \vspace{12pt}
+            \large{\textbf{\academicyear}}
+        \end{center}
+        \setlength{\tabcolsep}{0pt}
+        \renewcommand{\arraystretch}{1.15}
+        \begin{tabular}{ p{100pt} p{110pt} p{110pt} p{110pt}}
+            \textbf{Student Name(s)}  &\multicolumn{3}{p{330pt}}{: \@author}\\
+            
+            \textbf{Project Title}    &\multicolumn{3}{p{330pt}}{: \@title}\\
+            
+            \textbf{Supervisor(s)}    &\multicolumn{3}{p{330pt}}{: \supervisor}\\
+            
+            \textbf{Date of Meeting}  &: \@date&
+            
+            \textbf{Length of Meeting}&: \length
+        \end{tabular}
+    \end{titlepage}\par\vspace{1em}
+}
+
+% Content Tables
+\newlength{\tablelength}
+\setlength{\tablelength}{\textwidth}
+\addtolength{\tablelength}{-2\tabcolsep}
+\addtolength{\tablelength}{-1pt}
+
+\definecolor{tablegray}{HTML}{cccccc}
+
+\newenvironment{labeled}[2]
+    {\newcommand{\height}{#2}
+    \begin{tabular}{| p{\tablelength} |}
+        \hline
+        \rowcolor{tablegray}#1\\
+        \hline
+    }{\\[\height em]\hline
+      \end{tabular}\par\vspace{1em}
+    }
+
+\newenvironment{progress}[1][8]{\begin{labeled}{Progress made since the last meeting}{#1}}{\end{labeled}}
+\newenvironment{planned}[1][13]{\begin{labeled}{Items discussed\slash{}planned for the week}{#1}}{\end{labeled}}
+\newenvironment{remarks}[1][3]{\begin{labeled}{Remarks (if any)}{#1}}{\end{labeled}}
+
+% Signatures
+\newcommand{\printsignatures}{\par
+Secretary’s name and signature:
+
+\vspace{1em}
+Chairperson’s name and signature:
+
+\vspace{1em}
+Supervisor’s  signature(s):\hspace{\stretch{1}}Date: \@date
+\par}
