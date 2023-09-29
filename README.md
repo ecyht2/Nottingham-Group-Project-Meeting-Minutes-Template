@@ -1,4 +1,5 @@
 # Nottingham Group Project Meeting Minutes Template
+
 Template for Group Project Meeting Minute in University of Nottingham.
 
 ## Requirements
@@ -22,21 +23,24 @@ Engine: pdfLaTeX
 
 1. Install [git](https://git-scm.com/) to your computer.
 2. Change to desired directory.
-```sh
-cd /path/to/directory
-```
+
+    ```sh
+    cd /path/to/directory
+    ```
+
 3. Clone repository **Remember to change _directory\_name_ to the desired name of the folder**
-```
-git clone https://github.com/ecyht2/Nottingham-Group-Project-Meeting-Minutes-Template.git directory_name
-```
+
+    ```sh
+    git clone https://github.com/ecyht2/Nottingham-Group-Project-Meeting-Minutes-Template.git directory_name
+    ```
 
 #### Using Zip
 
 1. Download the ZIP file in the code dropdown.
 
-![Image of ZIP file download](readme_img/download-zip.png) 
+    ![Image of ZIP file download](readme_img/download-zip.png)
 
-3. Extract files to working directory.
+2. Extract files to working directory.
 
 #### Using GitHub
 
