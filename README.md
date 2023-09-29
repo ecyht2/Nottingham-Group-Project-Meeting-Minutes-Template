@@ -57,6 +57,34 @@ TBA
 
 This template provides commands to change the information the title page. All the commands available are shown in the table below.
 
+| Command                 | Description                             |
+| ----------------------- | --------------------------------------- |
+| \academicyear{year}     | Sets the academic year                  |
+| \author{authors}        | Sets the student name/names             |
+| \title{title}           | Sets the project title                  |
+| \supervisor{supervisor} | Sets the project supervisor/supervisors |
+| \date{date}             | Sets the date of the meeting            |
+| \length{duration}       | Sets the length of the meeting          |
+
+### Commands and Enviornments
+
+This template provides enviornments and commands to insert the contents of the meeting minutes.
+
+#### Commands
+
+| Command          | Description                | Parameters |
+| ---------------- | -------------------------- | ---------- |
+| \printsignatures | Prints the signature lines | None       |
+
+#### Enviornments
+
+| Enviornment | Description                                    | Parameters                                   |
+| ----------- | ---------------------------------------------- | -------------------------------------------- |
+| progress    | "Progress made since the last meeting" content | The minimum height of the content (optional) |
+| planned     | "Items discussed/planned for the week" content | The minimum height of the content (optional) |
+| remarks     | The remarks content                            | The minimum height of the content (optional) |
+| labeled     | A piece of content with a label.                   | The label of the content, The minimum height of the content |
+
 ## License
 
 This repository including images except for Nottingham logo is license under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
