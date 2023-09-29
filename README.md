@@ -33,8 +33,9 @@ git clone https://github.com/ecyht2/Nottingham-Group-Project-Meeting-Minutes-Tem
 #### Using Zip
 
 1. Download the ZIP file in the code dropdown.
+
 ![Image of ZIP file download](readme_img/download-zip.png) 
-2. Extract files to working directory.
+3. Extract files to working directory.
 
 #### Using GitHub
 
